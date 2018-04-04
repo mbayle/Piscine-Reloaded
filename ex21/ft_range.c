@@ -1,7 +1,18 @@
-#include <stdlib.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mabayle <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/04/04 13:34:56 by mabayle           #+#    #+#             */
+/*   Updated: 2018/04/04 13:42:18 by mabayle          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int   *ft_range(int min, int max)
+#include <stdlib.h>
+
+int		*ft_range(int min, int max)
 {
 	int *range;
 	int i;
@@ -10,8 +21,7 @@ int   *ft_range(int min, int max)
 	i = 0;
 	size = max - min;
 	range = (int *)malloc(sizeof(min) * size);
-
-	if(min >= max)
+	if (min >= max)
 		return (NULL);
 	while (i < size)
 	{
@@ -20,26 +30,4 @@ int   *ft_range(int min, int max)
 		i++;
 	}
 	return (range);
-}
-
-int   main(void)
-{
-int* res;
-int i;
-
-res = ft_range(5, 10);
-
-for (i = 0; i < 5; i++)
-  printf("%d,", res[i]);
-printf("\n");
-
-res = ft_range(-20, -15);
-for (i = 0; i < 5; i++)
-  printf("%d,", res[i]);
-printf("\n");
-
-res = ft_range(-2147483648, -2147483646);
-for (i = 0; i < 1; i++)
-	printf("%d,", res[i]);
-printf("\n");
 }

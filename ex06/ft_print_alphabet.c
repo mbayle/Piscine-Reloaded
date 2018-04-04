@@ -1,13 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mabayle <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/04/03 14:13:07 by mabayle           #+#    #+#             */
+/*   Updated: 2018/04/04 11:09:08 by mabayle          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 void	ft_putchar(char c);
 
-void ft_print_alphabet(void)
+void	ft_print_alphabet(void)
 {
-	int a;
+	char ltr;
 
-	a = 'a';
-	while(a <= 'z')
+	ltr = 'a';
+	while (ltr <= 'z')
 	{
-		ft_putchar(a);
-		a++;
+		ft_putchar(ltr);
+		ltr++;
 	}
 }
