@@ -5,29 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabayle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/04 13:34:56 by mabayle           #+#    #+#             */
-/*   Updated: 2018/04/04 13:42:18 by mabayle          ###   ########.fr       */
+/*   Created: 2018/04/06 04:34:45 by mabayle           #+#    #+#             */
+/*   Updated: 2018/04/06 04:34:54 by mabayle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int		*ft_range(int min, int max)
+int	*ft_range(int min, int max)
 {
-	int *range;
-	int i;
-	int size;
+	signed int	s_nb;
+	int			*str;
+	int			i;
 
 	i = 0;
-	size = max - min;
-	range = (int *)malloc(sizeof(min) * size);
+	s_nb = max - min;
 	if (min >= max)
 		return (NULL);
-	while (i < size)
+	str = (int *)malloc(sizeof(*str) * s_nb + 1);
+	while (min < max)
 	{
-		range[i] = min;
-		min++;
+		str[i] = min;
 		i++;
+		min++;
 	}
-	return (range);
+	str[i] = 0;
+	return (str);
 }
